@@ -28,9 +28,10 @@
                 </div>
 
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light me-2" type="button">Search</button>
-                    <button class="btn btn-outline-light" type="button">Clear</button>
+                    <input class="form-control me-2" id="search_field" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-light me-2" onclick="searchClick()" type="button">Search</button>
+                    <button class="btn btn-outline-light" onclick="clearSearch()" type="button">Clear</button>
                 </form>
 
             </div>
@@ -70,30 +71,19 @@
                 </svg>
             </div>
             <div class="col-6"">
-                <h1 class=" display-5 fw-bold">Indulge Your Travel Bug!</h1>
+                <h1 class="display-5 fw-bold">Indulge Your Travel Bug!</h1>
                 <p class="fs-4">All the resources you need to plan your next trip. Search for the best deals on flights,
                     car
                     rentals, hotels, activities and restaurants. Find your next destination now!</p>
                 <button class="btn btn-outline-light btn-lg" type="button">Book Now</button>
             </div>
-            <div class="col-5">
+            <div id="search_results" class="col-5">
                 <div class="container-fluid bg-dark bg-opacity-50">
-                    <div class="row p-2 border border-primary-subtle">
-                        <h4>Sydney, Australia</h4>
-                        <img class="img-fluid" width="150" height="100" src="./images/location_sydney.avif">
-                        <p class="">A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney
-                            Harbour Bridge.</p>
-                    </div>
-                    <div class="row p-2 border border-primary-subtle">
-                        <h4>Sydney, Australia</h4>
-                        <img class="img-fluid" src="./images/location_sydney.avif">
-                        <p class="">A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney
-                            Harbour Bridge.</p>
-                    </div>
-                </div>
 
+                </div>
             </div>
         </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
