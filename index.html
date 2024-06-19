@@ -27,10 +27,10 @@
                     </ul>
                 </div>
 
-                <form class="d-flex" role="search">
+                <form onsubmit="searchClick(); return false;" class="d-flex" role="search">
                     <input class="form-control me-2" id="search_field" type="search" placeholder="Search"
                         aria-label="Search">
-                    <button class="btn btn-outline-light me-2" onclick="searchClick()" type="button">Search</button>
+                    <input class="btn btn-outline-light me-2" type="submit" value="Search">
                     <button class="btn btn-outline-light" onclick="clearSearch()" type="button">Clear</button>
                 </form>
 
