@@ -50,6 +50,7 @@ function findLocationByTopic(topic) {
   return null;
 }
 
+//Perform the search
 function searchClick() {
   var topicToFind = document
     .getElementById("search_field")
@@ -83,6 +84,7 @@ function searchClick() {
   }
 }
 
+//Clear search
 function clearSearch() {
   document.getElementById("search_field").value = "";
   document.getElementById("search_results").innerHTML = "";
