@@ -39,13 +39,14 @@ function findLocationByTopic(topic) {
   }
 
   //for debugging / checking, dump all the locations
-  if ("all".match(topicRegex)) {
+  if ("all".match(topicRegex) || "country".match(topicRegex)) {
     var allLocations = location_data.temples.concat(location_data.beaches);
     for (const country of location_data.countries) {
       allLocations = allLocations.concat(country.cities);
     }
     return allLocations;
   }
+
 
   return null;
 }
