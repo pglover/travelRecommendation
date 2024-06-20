@@ -39,15 +39,21 @@ function findLocationByTopic(topic) {
   }
 
   //for debugging / checking, dump all the locations
-  if ("all".match(topicRegex) || "country".match(topicRegex)) {
-    var allLocations = location_data.temples.concat(location_data.beaches);
+  if ("all".match(topicRegex)) {
+    let allLocations = location_data.temples.concat(location_data.beaches);
     for (const country of location_data.countries) {
       allLocations = allLocations.concat(country.cities);
     }
     return allLocations;
   }
-
-
+      //check if the user searched for some variant of 'country'
+  if ("countries".match(topicRegex) || "country".match(topicRegex)) {
+    let allLocations = [];
+    for (const country of location_data.countries) {
+      allLocations = allLocations.concat(country.cities);
+    }
+    return allLocations;
+  }
   return null;
 }
 
@@ -66,7 +72,7 @@ function searchClick() {
     var innerDOM = `<div class="container-fluid bg-dark bg-opacity-50">`;
     results.forEach((location) => {
       innerDOM += `<div class="card border mb-2 rounded text-bg-secondary">
-                      <img class="card-img-top img-fluid" width="300" height="200" src="./images/${location.imageUrl}">
+                      <img class="card-img-top" width="300" height="200" src="./images/${location.imageUrl}">
                       <div class="card-body">
                         <h4 class="card-title">${location.name}</h4>
                         <p class="card-text">${location.description}</p>
